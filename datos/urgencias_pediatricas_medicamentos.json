@@ -1,0 +1,9 @@
+{
+  "Vancomicina": {
+    "dosis_mgkg": {
+      "IV": 15.0
+    },
+    "dosis_max": 500.0,
+    "descripcion": "Antibiótico glucopéptido"
+  }
+}

@@ -1,0 +1,5 @@
+Fecha,Hora,Edad,Peso_kg,Diagnostico,Medicamento,Via,Dosis_prescrita_mg,Dosis_esperada_mg,Dosis_preparada_mg,Clasificacion,Clasificacion_IA,Confianza_IA,Alerta,No_Expediente
+2026-04-26,14:08:31,2,12.0,Neumonía,Gentamicina,Intravenosa (IV),30.0,30.0,49.0,🚨 Alto riesgo,🚨 Alto riesgo,59.0,La dosis se desvía un 63.3%. No administrar hasta verificar.,
+2026-04-26,14:31:56,4,18.0,Infección respiratoria,Ceftriaxona,Intravenosa (IV),900.0,900.0,900.0,Dosis segura,✅ Seguro,100.0,La dosis preparada está dentro del rango esperado.,1.0
+2026-04-26,14:58:38,5,20.0,Sepsis,Vancomicina,Intravenosa (IV),300.0,300.0,300.0,Dosis segura,No disponible,0.0,La dosis preparada está dentro del rango esperado.,2.0
+2026-05-03,16:04:38,3,0.6,.,Ceftriaxona,Intravenosa (IV),0.6,30.0,0.3,Alto riesgo,No disponible,0.0,La dosis se desvía un 99.0% del valor esperado. No administrar hasta verificar.,5

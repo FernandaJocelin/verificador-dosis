@@ -1,0 +1,2 @@
+Fecha,Hora,Edad,Peso_kg,Diagnostico,Medicamento,Via,Dosis_prescrita_mg,Dosis_esperada_mg,Dosis_preparada_mg,Clasificacion,Clasificacion_IA,Confianza_IA,Alerta
+2026-04-26,13:20:55,2,12.0,Neumonía,Ceftriaxona,Intravenosa (IV),30.0,600.0,50.0,🚨 Alto riesgo,🚨 Alto riesgo,77.0,La dosis preparada se desvía un 91.7%. No administrar hasta verificar.
