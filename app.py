@@ -526,9 +526,9 @@ with tab3:
         st.info("Aún no hay casos registrados en esta área.")
     else:
         total = len(df)
-        seguros = len(df[df["Clasificacion"].str.contains("segura")])
-        advertencias_t = len(df[df["Clasificacion"].str.contains("Advertencia")])
-        riesgos = len(df[df["Clasificacion"].str.contains("riesgo")])
+        seguros = len(df[df["Clasificacion"].astype(str).str.contains("segura")])
+        advertencias_t = len(df[df["Clasificacion"].astype(str).str.contains("Advertencia")])
+        riesgos = len(df[df["Clasificacion"].astype(str).str.contains("riesgo")])
 
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Total de casos validados", total)
@@ -538,7 +538,7 @@ with tab3:
 
         st.divider()
         st.markdown("**Medicamentos con mayor frecuencia de alertas**")
-        df_alertas = df[df["Clasificacion"].str.contains("Advertencia|riesgo")]
+        df_alertas = df[df["Clasificacion"].astype(str).str.contains("Advertencia|riesgo")]
         if not df_alertas.empty:
             conteo = df_alertas["Medicamento"].value_counts().reset_index()
             conteo.columns = ["Medicamento", "Alertas"]
@@ -549,7 +549,7 @@ with tab3:
         st.divider()
         st.markdown("**Resumen de alertas por medicamento**")
         resumen = df.groupby("Medicamento")["Clasificacion"].apply(
-            lambda x: (x.str.contains("Advertencia|riesgo")).sum()
+            lambda x: (x.astype(str).str.contains("Advertencia|riesgo")).sum()
         ).reset_index()
         resumen.columns = ["Medicamento", "Casos con alerta"]
         resumen = resumen[resumen["Casos con alerta"] > 0].sort_values("Casos con alerta", ascending=False)
