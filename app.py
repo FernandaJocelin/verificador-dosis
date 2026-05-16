@@ -168,12 +168,12 @@ def guardar_caso_local(area, datos):
     df = pd.concat([df, nuevo], ignore_index=True)
     df.to_csv(path, index=False)
 
-# ── Función principal de historial (usa Sheets) ───────────────────────────────
+# ── Función principal de historial (local) ───────────────────────────────────
 def cargar_historial(area):
-    return cargar_historial_sheets(area)
+    return cargar_historial_local(area)
 
 def guardar_caso(area, datos):
-    guardar_caso_sheets(area, datos)
+    guardar_caso_local(area, datos)
 
 # ── Validación clínica ────────────────────────────────────────────────────────
 def validar_dosis(peso, dosis_mgkg, concentracion, volumen, dosis_max=None):
