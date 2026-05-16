@@ -67,7 +67,6 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-@st.cache_resource
 def conectar_sheets():
     try:
         creds_dict = st.secrets["gcp_service_account"]
