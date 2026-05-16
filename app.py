@@ -99,7 +99,8 @@ def cargar_historial_sheets(area):
         if "Area" in df.columns:
             df = df[df["Area"].astype(str).str.strip() == area.strip()]
         return df
-    except:
+    except Exception as e:
+        st.error(f"Error leyendo Sheets: {e}")
         return pd.DataFrame(columns=columnas)
 
 def guardar_caso_sheets(area, datos):
