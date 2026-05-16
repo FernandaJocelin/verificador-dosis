@@ -97,7 +97,7 @@ def cargar_historial_sheets(area):
                 df[col] = ""
         df = df[columnas]
         if "Area" in df.columns:
-            df = df[df["Area"] == area]
+            df = df[df["Area"].astype(str).str.strip() == area.strip()]
         return df
     except:
         return pd.DataFrame(columns=columnas)
