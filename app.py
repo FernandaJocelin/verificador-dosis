@@ -93,6 +93,10 @@ def cargar_historial_sheets(area):
         if not datos:
             return pd.DataFrame(columns=columnas)
         df = pd.DataFrame(datos)
+        for col in columnas:
+            if col not in df.columns:
+                df[col] = ""
+        df = df[columnas]
         if "Area" in df.columns:
             df = df[df["Area"] == area]
         return df
