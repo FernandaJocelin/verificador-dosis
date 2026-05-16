@@ -524,6 +524,11 @@ with tab2:
 with tab3:
     st.subheader(f"Retroalimentación — {area}")
     df = cargar_historial(area)
+    st.write("DEBUG área:", area)
+    st.write("DEBUG filas:", len(df))
+    st.write("DEBUG columnas:", list(df.columns))
+    if not df.empty:
+        st.write("DEBUG Area values:", df["Area"].unique().tolist())
 
     if df.empty:
         st.info("Aún no hay casos registrados en esta área.")
